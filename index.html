@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason | Personal Site</title>
-  <!-- This links to your stylesheet. Edit style.css to change how everything looks. -->
+  <title>Jason Jennings</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +11,7 @@
   <!-- ===== HEADER / NAV ===== -->
   <header>
     <nav>
-      <span class="logo">Jason</span>
+      <a class="logo" href="#">JASON JENNINGS</a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#interests">Interests</a></li>
@@ -21,52 +20,64 @@
     </nav>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO ===== -->
+  <!-- To use a real photo: put a file like hero.jpg in this folder and
+       swap the div below for:  <img class="hero-img" src="hero.jpg" alt=""> -->
   <section class="hero">
-    <h1>Hi, I'm Jason 👋</h1>
-    <p class="tagline">Welcome to my little corner of the internet.</p>
+    <img class="hero-img" src="banner.jpg" alt="Walking across a railroad trestle">
+    <p class="hero-caption">Edit this caption &mdash; where and when the photo was taken</p>
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Write a short bio here. Where you're from, what you do, what makes you tick.
-      This is plain HTML — just edit this text and refresh the page to see changes.
-    </p>
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Write a short bio here. Where you're from, what you do, what makes
+        you tick. Two or three short paragraphs works well.
+      </p>
+      <p>
+        A second paragraph &mdash; maybe your background, or what you're
+        learning right now.
+      </p>
+    </div>
+    <div class="about-photo">
+      <img src="portrait.jpg" alt="Jason at an overlook">
+    </div>
   </section>
+
+  <hr class="divider">
 
   <!-- ===== INTERESTS ===== -->
   <section id="interests">
     <h2>Things I'm Into</h2>
     <div class="cards">
-      <!-- Copy/paste a whole "card" div to add more -->
       <div class="card">
-        <h3>🔭 Interest One</h3>
+        <h3>Interest One</h3>
         <p>Replace this with a hobby or interest.</p>
       </div>
       <div class="card">
-        <h3>🎵 Interest Two</h3>
+        <h3>Interest Two</h3>
         <p>Another thing you enjoy.</p>
       </div>
       <div class="card">
-        <h3>💻 Interest Three</h3>
+        <h3>Interest Three</h3>
         <p>Maybe learning to build websites?</p>
       </div>
     </div>
   </section>
 
+  <hr class="divider">
+
   <!-- ===== CONTACT ===== -->
   <section id="contact">
     <h2>Get in Touch</h2>
-    <p>
-      Email me at <a href="mailto:jaybone317@gmail.com">jaybone317@gmail.com</a>
-    </p>
+    <p>Email me at <a href="mailto:jaybone317@gmail.com">jaybone317@gmail.com</a></p>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2026 Jason · Built by hand, learning as I go.</p>
+    <p>&copy; 2026 Jason Jennings</p>
   </footer>
 
 </body>

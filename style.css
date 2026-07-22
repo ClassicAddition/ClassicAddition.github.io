@@ -1,14 +1,15 @@
 /* ============================================
-   style.css — controls how index.html looks.
-   Change a value, save, refresh browser.
+   style.css — clean, light academic style
+   (inspired by lili-alderson.com / Weebly look)
    ============================================ */
 
-/* Color variables — change these 4 lines to re-theme the whole site */
 :root {
-  --bg: #0f172a;        /* page background */
-  --card: #1e293b;      /* card background */
-  --text: #e2e8f0;      /* main text color */
-  --accent: #38bdf8;    /* links & highlights */
+  --bg: #ffffff;        /* page background */
+  --text: #3a3a3a;      /* main text */
+  --heading: #1a1a1a;   /* headings */
+  --accent: #2a6f8e;    /* links */
+  --light: #f5f5f5;     /* card / placeholder background */
+  --border: #e0e0e0;
 }
 
 * {
@@ -18,10 +19,11 @@
 }
 
 body {
-  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* ===== NAV ===== */
@@ -29,56 +31,88 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: var(--heading);
+  text-decoration: none;
 }
 
 nav ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
-nav a {
+nav ul a {
   color: var(--text);
   text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
-nav a:hover {
+nav ul a:hover {
   color: var(--accent);
 }
 
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 6rem 1rem;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+.hero-placeholder {
+  height: 420px;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  opacity: 0.8;
+.hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-caption {
+  font-size: 0.8rem;
+  color: #999;
+  padding: 0.5rem;
+  letter-spacing: 0.1em;
 }
 
 /* ===== SECTIONS ===== */
 section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 1.5rem;
 }
 
 h2 {
-  color: var(--accent);
+  color: var(--heading);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-weight: 400;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+}
+
+p {
   margin-bottom: 1rem;
 }
 
@@ -86,27 +120,65 @@ a {
   color: var(--accent);
 }
 
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== ABOUT (text + photo side by side) ===== */
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.photo-placeholder {
+  background: var(--light);
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
+}
+
+.about-photo img {
+  width: 100%;
+  display: block;
+}
+
+/* Stack on phones */
+@media (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 /* ===== CARDS ===== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-  background: var(--card);
+  background: var(--light);
   padding: 1.5rem;
-  border-radius: 10px;
-}
-
-.card h3 {
-  margin-bottom: 0.5rem;
 }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 2rem;
-  opacity: 0.6;
-  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 0.1em;
 }
