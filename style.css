@@ -199,37 +199,113 @@ a {
 }
 
 .tribute-intro h1 {
-  font-weight: 400;
-  letter-spacing: 0.25em;
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--heading);
+  margin-bottom: 1.5rem;
 }
 
 .tribute-line {
-  color: #777;
+  color: #888;
   font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+}
+
+/* small ornamental divider: line - dot - line */
+.tribute-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto 1.5rem;
+  max-width: 220px;
+}
+
+.tribute-divider span {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.tribute-divider i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* Masonry-style gallery using CSS columns so photos of different
+   shapes sit at different heights, like a real photo wall */
+.tribute-gallery {
+  column-count: 2;
+  column-gap: 1.75rem;
+}
+
+@media (min-width: 700px) {
+  .tribute-gallery {
+    column-count: 3;
+  }
 }
 
 .tribute-gallery figure {
-  margin: 0 0 3rem;
-  text-align: center;
+  break-inside: avoid;
+  margin: 0 0 1.75rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.tribute-gallery figure:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
 }
 
 .tribute-gallery img {
   width: 100%;
   display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tribute-gallery figure.tall img {
+  aspect-ratio: 3 / 4;
+}
+
+.tribute-gallery figure:hover img {
+  transform: scale(1.04);
 }
 
 .tribute-gallery figcaption {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #999;
-  padding-top: 0.6rem;
-  letter-spacing: 0.05em;
+  font-style: italic;
+  text-align: center;
+  padding: 0.8rem 1rem 1.1rem;
+  letter-spacing: 0.02em;
 }
 
 .tribute-outro {
   text-align: center;
-  padding-top: 0;
+  padding-top: 2.5rem;
+}
+
+.tribute-outro p:first-of-type {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 500px) {
+  .tribute-gallery {
+    column-count: 1;
+  }
 }
 
 /* ===== FOOTER ===== */
