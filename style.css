@@ -180,6 +180,58 @@ a {
   padding: 1.5rem;
 }
 
+/* ===== CLICKABLE CARD ===== */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  transition: box-shadow 0.2s;
+}
+
+.card-link:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== PETEY TRIBUTE PAGE ===== */
+.tribute-intro {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.tribute-intro h1 {
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--heading);
+}
+
+.tribute-line {
+  color: #777;
+  font-style: italic;
+}
+
+.tribute-gallery figure {
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
+.tribute-gallery img {
+  width: 100%;
+  display: block;
+}
+
+.tribute-gallery figcaption {
+  font-size: 0.85rem;
+  color: #999;
+  padding-top: 0.6rem;
+  letter-spacing: 0.05em;
+}
+
+.tribute-outro {
+  text-align: center;
+  padding-top: 0;
+}
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
