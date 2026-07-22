@@ -271,6 +271,7 @@ a {
   display: block;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center 30%;
   transition: transform 0.5s ease;
 }
 
