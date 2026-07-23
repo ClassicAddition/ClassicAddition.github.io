@@ -387,23 +387,48 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* Videos: larger, own section at the bottom of the page */
+/* Videos: larger, own section at the bottom of the page. The long
+   (portrait) clip sits beside a stacked column of the car photo +
+   the short clip, so both sides read as roughly the same height. */
 .tribute-videos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   gap: 2.5rem;
   max-width: 1300px;
   padding-top: 0;
 }
 
 .video-item {
-  flex: 1 1 420px;
-  max-width: 560px;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+.video-tall {
+  flex: 0 1 380px;
+}
+
+.video-stack {
+  flex: 0 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.video-stack figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+.video-stack img {
+  width: 100%;
+  display: block;
 }
 
 .video-item video {
@@ -412,13 +437,22 @@ a {
   background: #000;
 }
 
-.video-item figcaption {
+.video-item figcaption,
+.video-stack figcaption {
   font-size: 0.85rem;
   color: #999;
   font-style: italic;
   text-align: center;
   padding: 0.9rem 1.1rem 1.2rem;
   letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .video-tall,
+  .video-stack {
+    flex: 1 1 100%;
+    max-width: 420px;
+  }
 }
 
 .tribute-outro {
