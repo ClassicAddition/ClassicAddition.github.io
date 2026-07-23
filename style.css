@@ -260,11 +260,10 @@ a {
 }
 
 .tribute-story img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  object-position: center 25%;
-  border-radius: 50%;
+  width: 220px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   flex-shrink: 0;
   cursor: zoom-in;
@@ -386,15 +385,38 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* Video card in the gallery */
-.video-figure video {
+/* Videos: larger, own section at the bottom of the page */
+.tribute-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1300px;
+  padding-top: 0;
+}
+
+.video-item {
+  flex: 1 1 420px;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+.video-item video {
   width: 100%;
   display: block;
   background: #000;
 }
 
-.video-figure:hover {
-  transform: none;
+.video-item figcaption {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 0.9rem 1.1rem 1.2rem;
+  letter-spacing: 0.02em;
 }
 
 .tribute-outro {
