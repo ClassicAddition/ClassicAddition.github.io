@@ -192,6 +192,39 @@ a {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* Pokemon card pulls: two small thumbnails side by side inside the card */
+.pokemon-pulls {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0.9rem 0;
+}
+
+.pokemon-pulls a {
+  flex: 1;
+  display: block;
+  cursor: zoom-in;
+}
+
+.pokemon-pulls img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease;
+}
+
+.pokemon-pulls img:hover {
+  transform: scale(1.03);
+}
+
+.pokemon-invite {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0;
+}
+
 /* ===== PETEY TRIBUTE PAGE ===== */
 .tribute-intro {
   text-align: center;
