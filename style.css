@@ -200,7 +200,7 @@ a {
 }
 
 .pokemon-pulls a {
-  flex: 1;
+  width: 130px;
   display: block;
   cursor: zoom-in;
 }
