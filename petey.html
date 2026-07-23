@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Petey | Jason Jennings</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -24,6 +24,14 @@
     <h1>Petey</h1>
     <div class="tribute-divider"><span></span><i></i><span></span></div>
     <p class="tribute-line">Rest in Peace my very best friend.</p>
+  </section>
+
+  <!-- Angel photo -->
+  <section class="tribute-hero">
+    <a href="#lb-angel" class="gallery-link">
+      <img src="petey-angel.jpg" alt="Petey with angel wings and a halo in a misty field">
+    </a>
+    <figcaption>Earned his wings, forever our angel</figcaption>
   </section>
 
   <!-- His story: shelter listing -->
@@ -131,6 +139,12 @@
       </video>
       <figcaption>One more clip of him being himself</figcaption>
     </figure>
+    <figure class="tall">
+      <a href="#lb-14" class="gallery-link">
+        <img src="petey-hug.jpg" alt="Jason holding Petey on a fall hike">
+      </a>
+      <figcaption>One more hug for the road</figcaption>
+    </figure>
     <!-- To add more photos, copy a whole <figure> block above (add
          class="tall" for a taller frame) and change the src/caption.
          Give each a unique #lb-N and add a matching lightbox div below. -->
@@ -148,6 +162,11 @@
 
   <!-- Lightboxes: click any photo to enlarge, click anywhere (or the
        X) to close -->
+  <div id="lb-angel" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-angel.jpg" alt="Petey with angel wings and a halo in a misty field">
+  </div>
   <div id="lb-story" class="lightbox">
     <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
     <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
@@ -217,6 +236,11 @@
     <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
     <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
     <img src="petey-carwindow.jpg" alt="Petey and another dog looking out a car window">
+  </div>
+  <div id="lb-14" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-hug.jpg" alt="Jason holding Petey on a fall hike">
   </div>
 
 </body>
