@@ -238,11 +238,86 @@ a {
   display: inline-block;
 }
 
+/* Wider container just for the tribute page so the bigger photos
+   have room to breathe (overrides the site-wide 900px section cap) */
+.tribute-intro,
+.tribute-story,
+.tribute-hero,
+.tribute-gallery,
+.tribute-outro {
+  max-width: 1300px;
+}
+
+/* His story: shelter photo + a few facts, side by side */
+.tribute-story {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  text-align: left;
+}
+
+.tribute-story img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+  cursor: zoom-in;
+}
+
+.tribute-story p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 550px) {
+  .tribute-story {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Featured hero photo */
+.tribute-hero {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+.tribute-hero img {
+  width: min(680px, 92%);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 55%;
+  border-radius: 10px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.tribute-hero img:hover {
+  transform: scale(1.015);
+}
+
+.tribute-hero figcaption {
+  margin-top: 1.2rem;
+  font-style: italic;
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
 /* Masonry-style gallery using CSS columns so photos of different
    shapes sit at different heights, like a real photo wall */
 .tribute-gallery {
   column-count: 2;
-  column-gap: 1.75rem;
+  column-gap: 2rem;
 }
 
 @media (min-width: 700px) {
@@ -251,9 +326,15 @@ a {
   }
 }
 
+@media (min-width: 1100px) {
+  .tribute-gallery {
+    column-count: 3;
+  }
+}
+
 .tribute-gallery figure {
   break-inside: avoid;
-  margin: 0 0 1.75rem;
+  margin: 0 0 2rem;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -264,6 +345,11 @@ a {
 .tribute-gallery figure:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
   transform: translateY(-2px);
+}
+
+.tribute-gallery .gallery-link {
+  display: block;
+  cursor: zoom-in;
 }
 
 .tribute-gallery img {
@@ -284,12 +370,23 @@ a {
 }
 
 .tribute-gallery figcaption {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: #999;
   font-style: italic;
   text-align: center;
-  padding: 0.8rem 1rem 1.1rem;
+  padding: 0.9rem 1.1rem 1.2rem;
   letter-spacing: 0.02em;
+}
+
+/* Video card in the gallery */
+.video-figure video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+.video-figure:hover {
+  transform: none;
 }
 
 .tribute-outro {
@@ -307,6 +404,58 @@ a {
   .tribute-gallery {
     column-count: 1;
   }
+}
+
+/* ===== Pure-CSS lightbox: click a photo, it opens full screen ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.lightbox:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-overlay-close {
+  position: absolute;
+  inset: 0;
+}
+
+.lightbox img {
+  position: relative;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.75rem;
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0.75;
+  z-index: 2;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
 }
 
 /* ===== FOOTER ===== */

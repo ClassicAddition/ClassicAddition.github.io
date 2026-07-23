@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Petey | Jason Jennings</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -26,41 +26,105 @@
     <p class="tribute-line">Rest in Peace my very best friend.</p>
   </section>
 
+  <!-- His story: shelter listing -->
+  <section class="tribute-story">
+    <a href="#lb-story" class="gallery-link">
+      <img src="petey-adoption.jpg" alt="Petey's shelter listing under the name Pee Wee">
+    </a>
+    <p>Before he was Petey, he was listed as &ldquo;Pee Wee&rdquo; &mdash; born September 10, 2014,
+      waiting for someone. That was me.</p>
+  </section>
+
+  <!-- Featured photo -->
+  <section class="tribute-hero">
+    <a href="#lb-1" class="gallery-link">
+      <img src="petey-sunset-run.jpg" alt="Jason and Petey running together at golden hour">
+    </a>
+    <figcaption>Running to catch up, golden light and all</figcaption>
+  </section>
+
   <section class="tribute-gallery">
-    <figure class="tall">
-      <img src="petey-bench.jpg" alt="Petey standing on a park bench saying hello">
+    <figure>
+      <a href="#lb-2" class="gallery-link">
+        <img src="petey-bench.jpg" alt="Petey standing on a park bench saying hello">
+      </a>
       <figcaption>Trailside break &mdash; he always had something to say</figcaption>
     </figure>
+    <figure class="tall">
+      <a href="#lb-3" class="gallery-link">
+        <img src="petey-goldenhour.jpg" alt="Petey running through a field at golden hour">
+      </a>
+      <figcaption>Chasing something only he could see</figcaption>
+    </figure>
     <figure>
-      <img src="petey-creek.jpg" alt="Petey looking out over a waterfall and creek">
+      <a href="#lb-4" class="gallery-link">
+        <img src="petey-creek.jpg" alt="Petey looking out over a waterfall and creek">
+      </a>
       <figcaption>Taking in the view</figcaption>
     </figure>
     <figure class="tall">
-      <img src="petey-park.jpg" alt="Close-up of Petey smiling with his tongue out at Thorne Street Park">
+      <a href="#lb-5" class="gallery-link">
+        <img src="petey-park.jpg" alt="Close-up of Petey smiling with his tongue out at Thorne Street Park">
+      </a>
       <figcaption>That grin, every single time</figcaption>
     </figure>
     <figure>
-      <img src="petey-falls-sit.jpg" alt="Jason sitting by a waterfall with Petey nearby">
+      <a href="#lb-6" class="gallery-link">
+        <img src="petey-falls-sit.jpg" alt="Jason sitting by a waterfall with Petey nearby">
+      </a>
       <figcaption>Cooling off together at the falls</figcaption>
     </figure>
     <figure class="tall">
-      <img src="petey-goldenhour.jpg" alt="Petey running through a field at golden hour">
-      <figcaption>Golden hour, chasing something only he could see</figcaption>
-    </figure>
-    <figure>
-      <img src="petey-walk.jpg" alt="Walking with Petey along a pond">
-      <figcaption>One of our many walks together</figcaption>
-    </figure>
-    <figure class="tall">
-      <img src="petey-pool.jpg" alt="Petey standing on a pool float">
+      <a href="#lb-7" class="gallery-link">
+        <img src="petey-pool.jpg" alt="Petey standing on a pool float">
+      </a>
       <figcaption>Making himself right at home on the pool float</figcaption>
     </figure>
     <figure>
-      <img src="petey-ball.jpg" alt="Petey playing with a tennis ball in the grass">
+      <a href="#lb-8" class="gallery-link">
+        <img src="petey-creek-wade.jpg" alt="Jason and Petey wading in a creek near a waterfall">
+      </a>
+      <figcaption>Wading in after him</figcaption>
+    </figure>
+    <figure class="tall">
+      <a href="#lb-9" class="gallery-link">
+        <img src="petey-creek-walk.jpg" alt="Jason and Petey walking along creek rocks">
+      </a>
+      <figcaption>Exploring together</figcaption>
+    </figure>
+    <figure>
+      <a href="#lb-10" class="gallery-link">
+        <img src="petey-walk.jpg" alt="Walking with Petey along a pond">
+      </a>
+      <figcaption>One of our many walks together</figcaption>
+    </figure>
+    <figure class="tall">
+      <a href="#lb-11" class="gallery-link">
+        <img src="petey-kitchen.jpg" alt="Petey and a Boston terrier housemate in the kitchen">
+      </a>
+      <figcaption>Home, with his favorite housemate</figcaption>
+    </figure>
+    <figure>
+      <a href="#lb-12" class="gallery-link">
+        <img src="petey-ball.jpg" alt="Petey playing with a tennis ball in the grass">
+      </a>
       <figcaption>Living for the tennis ball</figcaption>
     </figure>
+    <figure>
+      <a href="#lb-13" class="gallery-link">
+        <img src="petey-carwindow.jpg" alt="Petey and another dog looking out a car window">
+      </a>
+      <figcaption>Backseat lookouts</figcaption>
+    </figure>
+    <figure class="video-figure">
+      <video controls preload="metadata">
+        <source src="petey-video.mp4" type="video/mp4">
+      </video>
+      <figcaption>One more clip of him being himself</figcaption>
+    </figure>
     <!-- To add more photos, copy a whole <figure> block above (add
-         class="tall" for a taller frame) and change the src/caption -->
+         class="tall" for a taller frame) and change the src/caption.
+         Give each a unique #lb-N and add a matching lightbox div below. -->
   </section>
 
   <section class="tribute-outro">
@@ -72,6 +136,79 @@
   <footer>
     <p>&copy; 2026 Jason Jennings</p>
   </footer>
+
+  <!-- Lightboxes: click any photo to enlarge, click anywhere (or the
+       X) to close -->
+  <div id="lb-story" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-adoption.jpg" alt="Petey's shelter listing under the name Pee Wee">
+  </div>
+  <div id="lb-1" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-sunset-run.jpg" alt="Jason and Petey running together at golden hour">
+  </div>
+  <div id="lb-2" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-bench.jpg" alt="Petey standing on a park bench saying hello">
+  </div>
+  <div id="lb-3" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-goldenhour.jpg" alt="Petey running through a field at golden hour">
+  </div>
+  <div id="lb-4" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-creek.jpg" alt="Petey looking out over a waterfall and creek">
+  </div>
+  <div id="lb-5" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-park.jpg" alt="Close-up of Petey smiling with his tongue out at Thorne Street Park">
+  </div>
+  <div id="lb-6" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-falls-sit.jpg" alt="Jason sitting by a waterfall with Petey nearby">
+  </div>
+  <div id="lb-7" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-pool.jpg" alt="Petey standing on a pool float">
+  </div>
+  <div id="lb-8" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-creek-wade.jpg" alt="Jason and Petey wading in a creek near a waterfall">
+  </div>
+  <div id="lb-9" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-creek-walk.jpg" alt="Jason and Petey walking along creek rocks">
+  </div>
+  <div id="lb-10" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-walk.jpg" alt="Walking with Petey along a pond">
+  </div>
+  <div id="lb-11" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-kitchen.jpg" alt="Petey and a Boston terrier housemate in the kitchen">
+  </div>
+  <div id="lb-12" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-ball.jpg" alt="Petey playing with a tennis ball in the grass">
+  </div>
+  <div id="lb-13" class="lightbox">
+    <a href="#" class="lightbox-overlay-close" aria-label="Close"></a>
+    <a href="#" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="petey-carwindow.jpg" alt="Petey and another dog looking out a car window">
+  </div>
 
 </body>
 </html>
