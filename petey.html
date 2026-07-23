@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Petey | Jason Jennings</title>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -113,35 +113,27 @@
       </a>
       <figcaption>Living for the tennis ball</figcaption>
     </figure>
-    <!-- To add more photos, copy a whole <figure> block above (add
-         class="tall" for a taller frame) and change the src/caption.
-         Give each a unique #lb-N and add a matching lightbox div below. -->
-  </section>
-
-  <!-- Videos, shown larger at the bottom. The longer clip is tall
-       (portrait), so it's paired against a photo + the short clip
-       stacked in the other column to balance the heights. -->
-  <section class="tribute-videos">
-    <div class="video-item video-tall">
+    <figure>
+      <a href="#lb-13" class="gallery-link">
+        <img src="petey-carwindow.jpg" alt="Petey and another dog looking out a car window">
+      </a>
+      <figcaption>Backseat lookouts</figcaption>
+    </figure>
+    <figure class="tall video-card">
       <video controls preload="metadata">
         <source src="petey-video2.mp4" type="video/mp4">
       </video>
       <figcaption>One last look back</figcaption>
-    </div>
-    <div class="video-stack">
-      <figure>
-        <a href="#lb-13" class="gallery-link">
-          <img src="petey-carwindow.jpg" alt="Petey and another dog looking out a car window">
-        </a>
-        <figcaption>Backseat lookouts</figcaption>
-      </figure>
-      <div class="video-item">
-        <video controls preload="metadata">
-          <source src="petey-video.mp4" type="video/mp4">
-        </video>
-        <figcaption>One more clip of him being himself</figcaption>
-      </div>
-    </div>
+    </figure>
+    <figure class="video-card">
+      <video controls preload="metadata">
+        <source src="petey-video.mp4" type="video/mp4">
+      </video>
+      <figcaption>One more clip of him being himself</figcaption>
+    </figure>
+    <!-- To add more photos, copy a whole <figure> block above (add
+         class="tall" for a taller frame) and change the src/caption.
+         Give each a unique #lb-N and add a matching lightbox div below. -->
   </section>
 
   <section class="tribute-outro">
