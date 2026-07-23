@@ -276,6 +276,14 @@ a {
   margin-bottom: 0;
 }
 
+.tribute-story .story-caption {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--heading);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
 @media (max-width: 550px) {
   .tribute-story {
     flex-direction: column;
