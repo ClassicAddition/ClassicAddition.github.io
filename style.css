@@ -249,6 +249,13 @@ a {
   transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 }
 
+.card-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+
 .card-link:hover {
   transform: translateY(-3px);
   border-color: var(--card-border-hover);
