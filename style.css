@@ -248,24 +248,26 @@ a {
   max-width: 1300px;
 }
 
-/* His story: shelter photo + a few facts, side by side */
+/* His story: full shelter listing screenshot, stacked above the text
+   since it's a tall image and we're showing the whole thing */
 .tribute-story {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  max-width: 700px;
+  gap: 1.5rem;
+  max-width: 500px;
   margin: 0 auto;
   padding: 1.5rem 1.5rem 3rem;
-  text-align: left;
+  text-align: center;
 }
 
 .tribute-story img {
-  width: 220px;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   display: block;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  flex-shrink: 0;
   cursor: zoom-in;
 }
 
