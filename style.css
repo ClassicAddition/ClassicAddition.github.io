@@ -322,6 +322,11 @@ a {
   letter-spacing: 0.02em;
 }
 
+/* Angel photo: same hero treatment, just smaller */
+.tribute-hero-angel img {
+  width: min(480px, 75%);
+}
+
 /* Masonry-style gallery using CSS columns so photos of different
    shapes sit at different heights, like a real photo wall */
 .tribute-gallery {
